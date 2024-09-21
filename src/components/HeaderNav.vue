@@ -1,5 +1,9 @@
 <template>
   <nav class="navbar">
+    <div>
+      <h2 v-if="currentLanguage == 'EN'">About Us</h2>
+      <h2 v-else>เกี่ยวกับเรา</h2>
+    </div>
     <ul class="nav-links">
       <!-- Iterate over the navItems and display them dynamically -->
       <li v-for="(item, index) in navItems" :key="index">
@@ -33,7 +37,6 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa;
 }
 
 .nav-links {
