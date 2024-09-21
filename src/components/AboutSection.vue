@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="banner">
+      <img src="/thailand.jpg" alt="Banner Image" class="banner-image" />
       <div class="banner-text">
         <h1 v-if="currentLanguage === 'EN'">Welcome to Words In Thai</h1>
         <h1 v-else>ยินดีต้อนรับสู่ ภาษาไทย</h1>
@@ -204,15 +205,16 @@ h2 {
 .banner {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 400px; /* You can adjust this height as needed */
   overflow: hidden;
-  background: linear-gradient(
-    to bottom right,
-    #a2c2e8,
-    #33adff /* Deeper blue */
-  ); /* Blue gradient */
 }
 
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  object-position: 80% 90%; /* Centers horizontally and shows 20% down from the top */
+}
 .banner-text {
   position: absolute;
   top: 50%;
@@ -236,10 +238,10 @@ h2 {
 .flag {
   position: absolute;
   background-color: #f4f4f4;
-  top: 455px;
+  top: 390px;
   left: 45%;
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 5px solid #f4f4f4;
   z-index: 1;
@@ -283,6 +285,10 @@ h2 {
     margin-bottom: 20px;
   }
 
+  .banner {
+    height: 300px;
+  }
+
   .banner-text h1 {
     font-size: 2em;
   }
@@ -292,8 +298,15 @@ h2 {
   }
 
   .flag {
-    width: 80px;
+    position: absolute;
+    background-color: #f4f4f4;
+    top: 350px;
+    left: 43%;
     height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 5px solid #f4f4f4;
+    z-index: 1;
   }
 }
 </style>
