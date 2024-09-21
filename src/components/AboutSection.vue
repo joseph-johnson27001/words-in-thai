@@ -18,55 +18,61 @@
         <h1 v-else>ทำงานกับผู้เชี่ยวชาญด้านการแปล</h1>
       </div>
 
-      <p v-if="currentLanguage === 'EN'" class="intro-text">
-        Seeking a reliable team to take care of all your translation needs?
-        Looking for a team of professionals to put your words into Thai? Tell
-        your story, reach your audience.
-      </p>
-      <p v-else class="intro-text">
-        กำลังมองหาทีมที่น่าเชื่อถือเพื่อดูแลความต้องการในการแปลของคุณทั้งหมดหรือไม่?
-        มองหาทีมผู้เชี่ยวชาญที่จะแปลงคำของคุณเป็นภาษาไทย?
-        บอกเล่าเรื่องราวของคุณให้เข้าถึงกลุ่มเป้าหมายของคุณ
-      </p>
+      <div class="intro">
+        <p v-if="currentLanguage === 'EN'" class="intro-text">
+          Seeking a reliable team to take care of all your translation needs?
+          Looking for a team of professionals to put your words into Thai? Tell
+          your story, reach your audience.
+        </p>
+        <p v-else class="intro-text">
+          กำลังมองหาทีมที่น่าเชื่อถือเพื่อดูแลความต้องการในการแปลของคุณทั้งหมดหรือไม่?
+          มองหาทีมผู้เชี่ยวชาญที่จะแปลงคำของคุณเป็นภาษาไทย?
+          บอกเล่าเรื่องราวของคุณให้เข้าถึงกลุ่มเป้าหมายของคุณ
+        </p>
+      </div>
 
-      <p v-if="currentLanguage === 'EN'" class="body-text">
-        We strive to localize all content in a way that consumers, end users,
-        and readers will truly comprehend. Combining market competitive rates
-        with quick and efficient turnaround time, WordsInThai is the trusted
-        partner you can rely on for all translation services.
-      </p>
-      <p v-else class="body-text">
-        เรามุ่งมั่นที่จะแปลเนื้อหาทั้งหมดในลักษณะที่ผู้บริโภค ผู้ใช้ปลายทาง
-        และผู้อ่านจะเข้าใจได้อย่างแท้จริง
-        ด้วยการผสมผสานอัตราค่าบริการที่แข่งขันได้ในตลาดและเวลาการดำเนินการที่รวดเร็ว
-        WordsInThai เป็นพันธมิตรที่เชื่อถือได้สำหรับบริการแปลทั้งหมดของคุณ
-      </p>
-
-      <h2 v-if="currentLanguage === 'EN'">OUR LINGUISTS</h2>
-      <h2 v-else>นักแปลของเรา</h2>
-
-      <p v-if="currentLanguage === 'EN'" class="body-text">
-        All of our professional translators have been hand-picked from the best
-        talent in the industry and have six years' average experience each. Your
-        words are personal, we respect that, so your words stay in human hands
-        from beginning to end.
-      </p>
-      <p v-else class="body-text">
-        นักแปลมืออาชีพทุกคนของเราได้รับการคัดเลือกมาอย่างดีจากพรสวรรค์ที่ดีที่สุดในอุตสาหกรรม
-        และมีประสบการณ์เฉลี่ยหกปีในแต่ละคน คำพูดของคุณเป็นเรื่องส่วนตัว
-        เราเคารพในสิ่งนั้น ดังนั้นคำพูดของคุณจะอยู่ในมือมนุษย์ตั้งแต่ต้นจนจบ
-      </p>
-
-      <p v-if="currentLanguage === 'EN'" class="body-text">
-        We offer a range of services, including document translation, video
-        translation, website localization, and e-learning translation. Our
-        mission is to help you reach your global audience with ease.
-      </p>
-      <p v-else class="body-text">
-        เราให้บริการที่หลากหลาย รวมถึงการแปลเอกสาร การแปลวิดีโอ
-        การปรับแต่งเว็บไซต์ และการแปลการเรียนรู้ทางอิเล็กทรอนิกส์
-        ภารกิจของเราคือการช่วยคุณเข้าถึงผู้ชมทั่วโลกได้อย่างง่ายดาย
-      </p>
+      <div class="columns">
+        <div class="column">
+          <h2 v-if="currentLanguage === 'EN'">OUR LINGUISTS</h2>
+          <h2 v-else>นักแปลของเรา</h2>
+          <p v-if="currentLanguage === 'EN'" class="body-text">
+            All of our professional translators have been hand-picked from the
+            best talent in the industry and have six years' average experience
+            each. Your words are personal, we respect that, so your words stay
+            in human hands from beginning to end.
+          </p>
+          <p v-else class="body-text">
+            นักแปลมืออาชีพทุกคนของเราได้รับการคัดเลือกมาอย่างดีจากพรสวรรค์ที่ดีที่สุดในอุตสาหกรรม
+            และมีประสบการณ์เฉลี่ยหกปีในแต่ละคน คำพูดของคุณเป็นเรื่องส่วนตัว
+            เราเคารพในสิ่งนั้น ดังนั้นคำพูดของคุณจะอยู่ในมือมนุษย์ตั้งแต่ต้นจนจบ
+          </p>
+        </div>
+        <div class="column">
+          <h2 v-if="currentLanguage === 'EN'">SERVICES</h2>
+          <h2 v-else>บริการ</h2>
+          <p v-if="currentLanguage === 'EN'" class="body-text">
+            We offer a range of services, including document translation, video
+            translation, website localization, and e-learning translation. Our
+            mission is to help you reach your global audience with ease.
+          </p>
+          <p v-else class="body-text">
+            เราให้บริการที่หลากหลาย รวมถึงการแปลเอกสาร การแปลวิดีโอ
+            การปรับแต่งเว็บไซต์ และการแปลการเรียนรู้ทางอิเล็กทรอนิกส์
+            ภารกิจของเราคือการช่วยคุณเข้าถึงผู้ชมทั่วโลกได้อย่างง่ายดาย
+          </p>
+        </div>
+        <div class="column">
+          <h2 v-if="currentLanguage === 'EN'">TEAM</h2>
+          <h2 v-else>ทีมงาน</h2>
+          <p v-if="currentLanguage === 'EN'" class="body-text">
+            Our team is composed of experienced professionals from diverse
+            backgrounds.
+          </p>
+          <p v-else class="body-text">
+            ทีมงานของเราประกอบด้วยมืออาชีพที่มีประสบการณ์จากหลายสาขา
+          </p>
+        </div>
+      </div>
 
       <div class="team-section">
         <div class="team-member" v-for="member in teamMembers" :key="member.id">
@@ -76,7 +82,7 @@
         </div>
       </div>
 
-      <div class="columns">
+      <div class="mission-values">
         <div class="column">
           <h2 v-if="currentLanguage === 'EN'">MISSION</h2>
           <h2 v-else>ภารกิจ</h2>
@@ -97,15 +103,6 @@
           <p v-else>
             ค่านิยมของเราคือ ความซื่อสัตย์ ความเป็นมืออาชีพ และความมุ่งมั่น
           </p>
-        </div>
-        <div class="column">
-          <h2 v-if="currentLanguage === 'EN'">TEAM</h2>
-          <h2 v-else>ทีมงาน</h2>
-          <p v-if="currentLanguage === 'EN'">
-            Our team is composed of experienced professionals from diverse
-            backgrounds.
-          </p>
-          <p v-else>ทีมงานของเราประกอบด้วยมืออาชีพที่มีประสบการณ์จากหลายสาขา</p>
         </div>
       </div>
     </div>
@@ -134,7 +131,6 @@ export default {
           title: "Editor",
           image: "/jane-smith.JPG",
         },
-        // Add more team members as needed
       ],
     };
   },
@@ -169,10 +165,21 @@ h2 {
   margin: 40px 0 20px;
 }
 
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
 .team-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   gap: 20px;
   margin: 40px 0;
 }
@@ -188,14 +195,10 @@ h2 {
   border-radius: 50%;
 }
 
-.columns {
+.mission-values {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 40px 0;
-}
-
-.column {
-  width: 30%;
 }
 
 .banner {
@@ -206,7 +209,7 @@ h2 {
   background: linear-gradient(
     to bottom right,
     #a2c2e8,
-    /* Light blue */ #33adff /* Deeper blue */
+    #33adff /* Deeper blue */
   ); /* Blue gradient */
 }
 
@@ -233,13 +236,28 @@ h2 {
 .flag {
   position: absolute;
   background-color: #f4f4f4;
-  top: 410px;
+  top: 455px;
   left: 45%;
   width: 125px;
   height: 125px;
   border-radius: 50%;
   border: 5px solid #f4f4f4;
   z-index: 1;
+}
+
+.about-header h1 {
+  color: #24315d;
+  font-weight: 100;
+}
+
+h2 {
+  font-weight: 100;
+  color: #24315d;
+}
+
+.mission-values h2 {
+  color: #ccad00;
+  font-weight: 100;
 }
 
 @media screen and (max-width: 768px) {
@@ -274,8 +292,8 @@ h2 {
   }
 
   .flag {
-    width: 80px; /* Adjust for smaller screens */
-    height: 80px; /* Adjust for smaller screens */
+    width: 80px;
+    height: 80px;
   }
 }
 </style>
