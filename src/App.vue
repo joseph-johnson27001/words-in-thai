@@ -17,7 +17,7 @@ export default {
 <style>
 /* General global styles */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Noto Sans Thai", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
