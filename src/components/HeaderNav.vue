@@ -6,8 +6,12 @@
         <h2 v-else>ภาษาไทย</h2>
       </div>
       <div class="nav-links-container">
-        <ul class="nav-links">
-          <!-- Iterate over the navItems and display them dynamically -->
+        <div class="hamburger" @click="toggleMenu">
+          <div :class="{ active: isMenuOpen }"></div>
+          <div :class="{ active: isMenuOpen }"></div>
+          <div :class="{ active: isMenuOpen }"></div>
+        </div>
+        <ul class="nav-links" :class="{ open: isMenuOpen }">
           <li v-for="(item, index) in navItems" :key="index">
             <a href="#">{{ item }}</a>
           </li>
@@ -24,6 +28,11 @@
 import { mapGetters, mapActions } from "vuex";
 
 export default {
+  data() {
+    return {
+      isMenuOpen: false,
+    };
+  },
   computed: {
     ...mapGetters(["currentLanguage", "navItems"]),
   },
@@ -32,6 +41,9 @@ export default {
     toggleLang() {
       const newLang = this.currentLanguage === "EN" ? "TH" : "EN";
       this.changeLanguage(newLang);
+    },
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
     },
   },
 };
@@ -59,22 +71,38 @@ export default {
 
 .nav-links-container {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
-h2 {
-  font-weight: 100;
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.nav-links.open {
+  max-height: 500px; /* Adjust as needed */
 }
 
 .nav-links li a {
   text-decoration: none;
-  /* font-size: 1.2em; */
   color: white;
 }
 
@@ -85,5 +113,21 @@ h2 {
   border-radius: 5px;
   background-color: #24315d;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    width: 100%; /* Full width */
+  }
+
+  .nav-links.open {
+    display: flex; /* Show links when menu is open */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on smaller screens */
+  }
 }
 </style>

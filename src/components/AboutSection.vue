@@ -13,7 +13,6 @@
     </div>
 
     <div class="about-section">
-      <img src="@/assets/thai-flag.png" alt="Thai Flag" class="flag" />
       <div class="about-header">
         <h1 v-if="currentLanguage === 'EN'">Work with Translation Experts</h1>
         <h1 v-else>ทำงานกับผู้เชี่ยวชาญด้านการแปล</h1>
@@ -67,10 +66,11 @@
           <h2 v-else>ทีมงาน</h2>
           <p v-if="currentLanguage === 'EN'" class="body-text">
             Our team is composed of experienced professionals from diverse
-            backgrounds.
+            backgrounds, ensuring a wide range of expertise for your projects.
           </p>
           <p v-else class="body-text">
             ทีมงานของเราประกอบด้วยมืออาชีพที่มีประสบการณ์จากหลายสาขา
+            ซึ่งมั่นใจได้ว่ามีความเชี่ยวชาญหลากหลายสำหรับโครงการของคุณ
           </p>
         </div>
       </div>
@@ -89,22 +89,54 @@
           <h2 v-else>ภารกิจ</h2>
           <p v-if="currentLanguage === 'EN'">
             Our mission is to provide high-quality translations that resonate
-            with your audience.
+            with your audience. We aim to break down language barriers,
+            fostering communication and understanding across cultures.
           </p>
           <p v-else>
             ภารกิจของเราคือการให้บริการการแปลคุณภาพสูงที่เข้ากับกลุ่มเป้าหมายของคุณ
+            เรามุ่งมั่นที่จะทำลายอุปสรรคทางภาษาเพื่อส่งเสริมการสื่อสารและความเข้าใจระหว่างวัฒนธรรม
           </p>
         </div>
         <div class="column">
           <h2 v-if="currentLanguage === 'EN'">VALUES</h2>
           <h2 v-else>ค่านิยม</h2>
           <p v-if="currentLanguage === 'EN'">
-            Our values are integrity, professionalism, and dedication.
+            Our values are integrity, professionalism, and dedication. We
+            believe in treating every project with utmost care and attention,
+            ensuring that your message is conveyed accurately and effectively.
           </p>
           <p v-else>
             ค่านิยมของเราคือ ความซื่อสัตย์ ความเป็นมืออาชีพ และความมุ่งมั่น
+            เราเชื่อในการดูแลและใส่ใจทุกรายละเอียดของโครงการ
+            เพื่อให้แน่ใจว่าข้อความของคุณถูกถ่ายทอดอย่างถูกต้องและมีประสิทธิภาพ
           </p>
         </div>
+      </div>
+
+      <div class="testimonials">
+        <h2 v-if="currentLanguage === 'EN'">Client Testimonials</h2>
+        <h2 v-else>คำรับรองจากลูกค้า</h2>
+        <p v-if="currentLanguage === 'EN'">
+          "Words In Thai provided an exceptional service, delivering our project
+          on time and exceeding our expectations."
+        </p>
+        <p v-else>
+          "Words In Thai มอบบริการที่ยอดเยี่ยม
+          ส่งมอบโครงการของเราได้ตรงเวลาและเกินความคาดหมาย"
+        </p>
+      </div>
+
+      <div class="call-to-action">
+        <h2 v-if="currentLanguage === 'EN'">Ready to Get Started?</h2>
+        <h2 v-else>พร้อมที่จะเริ่มต้นแล้วหรือยัง?</h2>
+        <p v-if="currentLanguage === 'EN'">
+          Contact us today for a free consultation and let us help you with your
+          translation needs.
+        </p>
+        <p v-else>
+          ติดต่อเราวันนี้เพื่อขอคำปรึกษาฟรี
+          และให้เราช่วยคุณในความต้องการในการแปลของคุณ
+        </p>
       </div>
     </div>
   </div>
@@ -204,6 +236,16 @@ h2 {
   margin: 40px 0;
 }
 
+.testimonials {
+  margin: 40px 0;
+}
+
+.call-to-action {
+  margin: 40px 0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
 .banner {
   position: relative;
   width: 100%;
@@ -217,6 +259,7 @@ h2 {
   object-fit: cover; /* Ensures the image covers the area without distortion */
   object-position: 80% 90%; /* Centers horizontally and shows 20% down from the top */
 }
+
 .banner-text {
   position: absolute;
   top: 50%;
