@@ -79,7 +79,7 @@
         <div class="team-member" v-for="member in teamMembers" :key="member.id">
           <img :src="member.image" :alt="member.name" class="team-image" />
           <h3>{{ member.name }}</h3>
-          <p>{{ member.title }}</p>
+          <p>{{ currentLanguage === "EN" ? member.title : member.titleTH }}</p>
         </div>
       </div>
 
@@ -124,12 +124,14 @@ export default {
           id: 1,
           name: "John Doe",
           title: "Translator",
+          titleTH: "นักแปล",
           image: "john-doe.JPG",
         },
         {
           id: 2,
           name: "Jane Smith",
           title: "Editor",
+          titleTH: "บรรณาธิการ",
           image: "/jane-smith.JPG",
         },
       ],

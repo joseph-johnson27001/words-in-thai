@@ -2,8 +2,8 @@
   <div class="navbar-container">
     <nav class="navbar">
       <div>
-        <h2 v-if="currentLanguage == 'EN'">About Us</h2>
-        <h2 v-else>เกี่ยวกับเรา</h2>
+        <h2 v-if="currentLanguage == 'EN'">Words In Thai</h2>
+        <h2 v-else>ภาษาไทย</h2>
       </div>
       <div class="nav-links-container">
         <ul class="nav-links">
@@ -60,6 +60,10 @@ export default {
 .nav-links-container {
   display: flex;
   gap: 20px;
+}
+
+h2 {
+  font-weight: 100;
 }
 
 .nav-links {
