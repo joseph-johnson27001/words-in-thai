@@ -526,12 +526,12 @@ p {
   }
 
   .team-section {
-    flex-direction: column; /* Stack team members */
+    flex-direction: column;
     align-items: center;
   }
 
   .team-member {
-    width: 60%; /* Make team members full width on small screens */
+    width: 40%; /* Make team members full width on small screens */
   }
 }
 
