@@ -3,8 +3,9 @@
     <div class="banner">
       <img src="/thailand.jpg" alt="Banner Image" class="banner-image" />
       <div class="banner-text">
-        <h1 v-if="currentLanguage === 'EN'">Welcome to Words In Thai</h1>
-        <h1 v-else>ยินดีต้อนรับสู่ ภาษาไทย</h1>
+        <h1 v-if="currentLanguage === 'EN'">Words In Thai</h1>
+        <h1 v-else>ภาษาไทย</h1>
+
         <p v-if="currentLanguage === 'EN'">
           Your trusted partner for professional translation services.
         </p>
