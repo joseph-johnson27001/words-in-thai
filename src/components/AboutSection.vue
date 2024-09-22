@@ -9,6 +9,14 @@
           Your trusted partner for professional translation services.
         </p>
         <p v-else>พันธมิตรที่คุณไว้วางใจสำหรับบริการแปลมืออาชีพ</p>
+        <div class="banner-buttons">
+          <button @click="navigateToContact" class="banner-btn">
+            {{ currentLanguage === "EN" ? "Contact Us" : "ติดต่อเรา" }}
+          </button>
+          <button @click="navigateToServices" class="banner-btn">
+            {{ currentLanguage === "EN" ? "Our Services" : "บริการของเรา" }}
+          </button>
+        </div>
       </div>
     </div>
 
@@ -314,6 +322,31 @@ h2 {
   font-weight: 100;
 }
 
+.banner-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.banner-btn {
+  padding: 10px 20px;
+  border: 1px solid #24315d;
+
+  border-radius: 50px;
+
+  background-color: #24315d;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.banner-btn:hover {
+  color: #24315d;
+  background-color: white;
+}
+
 @media screen and (max-width: 768px) {
   .about-section {
     padding: 20px 10px;
@@ -359,6 +392,20 @@ h2 {
     border-radius: 50%;
     border: 5px solid #f4f4f4;
     z-index: 1;
+  }
+
+  .banner-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .banner-btn {
+      font-size: 1em;
+      padding: 8px 16px;
+    }
   }
 }
 </style>
