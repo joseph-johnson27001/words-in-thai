@@ -531,7 +531,7 @@ p {
   }
 
   .team-member {
-    width: 100%; /* Make team members full width on small screens */
+    width: 60%; /* Make team members full width on small screens */
   }
 }
 
