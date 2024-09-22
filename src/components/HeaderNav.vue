@@ -106,7 +106,7 @@ export default {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 0px 42px;
+  padding: 0px 5px;
   color: white;
   font-size: 0.8rem;
   align-items: center;
