@@ -23,7 +23,7 @@
 
     <div class="about-section">
       <div class="about-header">
-        <h1 v-if="currentLanguage === 'EN'">Work with Translation Experts</h1>
+        <h1 v-if="currentLanguage === 'EN'">Work With Translation Experts</h1>
         <h1 v-else>ทำงานกับผู้เชี่ยวชาญด้านการแปล</h1>
       </div>
 
@@ -122,30 +122,32 @@
         </div>
       </div>
 
-      <div class="testimonials">
-        <h2 v-if="currentLanguage === 'EN'">Client Testimonials</h2>
-        <h2 v-else>คำรับรองจากลูกค้า</h2>
-        <p v-if="currentLanguage === 'EN'">
-          "Words In Thai provided an exceptional service, delivering our project
-          on time and exceeding our expectations."
-        </p>
-        <p v-else>
-          "Words In Thai มอบบริการที่ยอดเยี่ยม
-          ส่งมอบโครงการของเราได้ตรงเวลาและเกินความคาดหมาย"
-        </p>
-      </div>
+      <div class="mission-values">
+        <div class="testimonials">
+          <h2 v-if="currentLanguage === 'EN'">Client Testimonials</h2>
+          <h2 v-else>คำรับรองจากลูกค้า</h2>
+          <p v-if="currentLanguage === 'EN'">
+            "Words In Thai provided an exceptional service, delivering our
+            project on time and exceeding our expectations."
+          </p>
+          <p v-else>
+            "Words In Thai มอบบริการที่ยอดเยี่ยม
+            ส่งมอบโครงการของเราได้ตรงเวลาและเกินความคาดหมาย"
+          </p>
+        </div>
 
-      <div class="call-to-action">
-        <h2 v-if="currentLanguage === 'EN'">Ready to Get Started?</h2>
-        <h2 v-else>พร้อมที่จะเริ่มต้นแล้วหรือยัง?</h2>
-        <p v-if="currentLanguage === 'EN'">
-          Contact us today for a free consultation and let us help you with your
-          translation needs.
-        </p>
-        <p v-else>
-          ติดต่อเราวันนี้เพื่อขอคำปรึกษาฟรี
-          และให้เราช่วยคุณในความต้องการในการแปลของคุณ
-        </p>
+        <div class="call-to-action">
+          <h2 v-if="currentLanguage === 'EN'">Ready to Get Started?</h2>
+          <h2 v-else>พร้อมที่จะเริ่มต้นแล้วหรือยัง?</h2>
+          <p v-if="currentLanguage === 'EN'">
+            Contact us today for a free consultation and let us help you with
+            your translation needs.
+          </p>
+          <p v-else>
+            ติดต่อเราวันนี้เพื่อขอคำปรึกษาฟรี
+            และให้เราช่วยคุณในความต้องการในการแปลของคุณ
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -174,6 +176,13 @@ export default {
           title: "Editor",
           titleTH: "บรรณาธิการ",
           image: "/jane-smith.JPG",
+        },
+        {
+          id: 3,
+          name: "Alice Brown",
+          title: "Project Manager",
+          titleTH: "ผู้จัดการโครงการ",
+          image: "/alice-brown.JPG",
         },
       ],
     };
@@ -211,9 +220,13 @@ export default {
   margin: 20px 0;
 }
 
+.intro-text {
+  margin: 20px 30px;
+}
+
 h2 {
   font-size: 2em;
-  margin: 40px 0 20px;
+  margin: 20px 0 20px;
 }
 
 .columns {
@@ -225,6 +238,14 @@ h2 {
 .column {
   flex: 1;
   padding: 10px;
+  margin: 0px 20px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  /* text-align: justify; */
+  color: #24315d;
 }
 
 .team-section {
@@ -232,7 +253,6 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
-  margin: 40px 0;
 }
 
 .team-member {
@@ -250,6 +270,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin: 40px 0;
+  align-items: center;
 }
 
 .testimonials {
@@ -294,6 +315,7 @@ h2 {
 .banner-text p {
   font-size: 1.5em;
   margin-top: 10px;
+  color: white;
 }
 
 .flag {
@@ -309,18 +331,13 @@ h2 {
 }
 
 .about-header h1 {
-  color: #24315d;
+  color: #333;
   font-weight: 100;
 }
 
 h2 {
-  font-weight: 100;
+  font-weight: 600;
   color: #24315d;
-}
-
-.mission-values h2 {
-  color: #ccad00;
-  font-weight: 100;
 }
 
 .banner-buttons {
@@ -346,6 +363,12 @@ h2 {
 .banner-btn:hover {
   color: #24315d;
   background-color: white;
+}
+
+.testimonials-and-actions-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {

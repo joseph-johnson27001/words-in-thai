@@ -28,6 +28,11 @@ body {
   justify-content: center;
 }
 
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+}
+
 #app {
   background-color: white;
   max-width: 1200px;
