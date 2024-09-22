@@ -404,8 +404,8 @@ p {
 }
 
 .mission-values {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin: 40px 0;
 }
 
@@ -417,6 +417,7 @@ p {
 
 .testimonials {
   margin: 40px 0;
+  padding: 20px;
 }
 
 .call-to-action {
@@ -509,20 +510,32 @@ p {
     height: 300px;
   }
 
+  .banner-btn {
+    padding: 10px 10px;
+    border: 1px solid #24315d;
+    border-radius: 50px;
+    background-color: #24315d;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .banner-text {
+    width: 95%;
+  }
+
   .banner-text h1 {
     font-size: 2em;
   }
 
   .banner-text p {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .mission-values {
-    flex-direction: column; /* Stack mission and values sections */
-  }
-
-  .mission-value {
-    margin-bottom: 20px; /* Add spacing between stacked items */
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .team-section {
