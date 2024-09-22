@@ -84,14 +84,6 @@
         </div>
       </div>
 
-      <div class="team-section">
-        <div class="team-member" v-for="member in teamMembers" :key="member.id">
-          <img :src="member.image" :alt="member.name" class="team-image" />
-          <h3>{{ member.name }}</h3>
-          <p>{{ currentLanguage === "EN" ? member.title : member.titleTH }}</p>
-        </div>
-      </div>
-
       <section class="services-section">
         <div class="container">
           <div class="service-card" v-if="currentLanguage === 'EN'">
@@ -229,6 +221,14 @@
           </div>
         </div>
       </section>
+
+      <div class="team-section">
+        <div class="team-member" v-for="member in teamMembers" :key="member.id">
+          <img :src="member.image" :alt="member.name" class="team-image" />
+          <h3>{{ member.name }}</h3>
+          <p>{{ currentLanguage === "EN" ? member.title : member.titleTH }}</p>
+        </div>
+      </div>
 
       <div class="mission-values">
         <div class="mission-value">
@@ -370,7 +370,7 @@ h2 {
 .columns {
   display: flex;
   justify-content: space-between;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .column {
@@ -390,6 +390,7 @@ p {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
+  padding-top: 50px;
 }
 
 .team-member {
@@ -534,6 +535,7 @@ p {
   .mission-values {
     display: grid;
     grid-template-columns: 1fr;
+    margin: 0px;
   }
 
   .team-section {
@@ -546,12 +548,16 @@ p {
   }
 
   .testimonials {
-    padding: 10px;
+    padding: 0px 10px;
+  }
+
+  .call-to-action {
+    margin: 5px;
   }
 }
 
 .services-section {
-  padding: 40px 0;
+  padding: 0px;
 }
 .container {
   display: grid;
