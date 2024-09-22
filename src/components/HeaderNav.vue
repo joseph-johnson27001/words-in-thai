@@ -208,5 +208,10 @@ export default {
   .hamburger {
     display: flex; /* Show hamburger on smaller screens */
   }
+
+  .top-bar-info-container {
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
 }
 </style>
