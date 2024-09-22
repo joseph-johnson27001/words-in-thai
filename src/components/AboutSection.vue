@@ -554,6 +554,7 @@ p {
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 .service-card img {
   width: 100px;

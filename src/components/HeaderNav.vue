@@ -41,10 +41,10 @@
         />
       </div>
       <div class="nav-links-container">
-        <div class="hamburger" @click="toggleMenu">
-          <div :class="{ active: isMenuOpen }"></div>
-          <div :class="{ active: isMenuOpen }"></div>
-          <div :class="{ active: isMenuOpen }"></div>
+        <div class="hamburger">
+          <div :class="{ active: isMenuOpen }" class="burger-div"></div>
+          <div :class="{ active: isMenuOpen }" class="burger-div"></div>
+          <div :class="{ active: isMenuOpen }" class="burger-div"></div>
         </div>
         <ul class="nav-links" :class="{ open: isMenuOpen }">
           <li v-for="(item, index) in navItems" :key="index">
@@ -152,8 +152,12 @@ export default {
   width: 25px;
   height: 3px;
   color: #24315d;
-  margin: 4px 0;
+  margin: 2px 0;
   transition: 0.3s;
+}
+
+.burger-div {
+  background-color: #24315d;
 }
 
 .logo-image {
