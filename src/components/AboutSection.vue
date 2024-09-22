@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="about-page">
     <div class="banner">
       <img src="/thailand.jpg" alt="Banner Image" class="banner-image" />
       <div class="banner-text">
@@ -173,11 +173,18 @@ export default {
 </script>
 
 <style scoped>
+.about-page {
+  /* border: 1px solid #ccc; */
+  /* margin-top: 5px; */
+  border-radius: 5px;
+  border-top: none;
+}
+
 .about-section {
-  max-width: 1000px;
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
+  max-width: 1200px;
 }
 
 .about-header {
@@ -248,7 +255,7 @@ h2 {
 
 .banner {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 400px; /* You can adjust this height as needed */
   overflow: hidden;
 }

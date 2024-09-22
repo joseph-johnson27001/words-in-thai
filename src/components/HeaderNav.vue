@@ -1,9 +1,44 @@
 <template>
+  <div class="top-bar">
+    <div class="top-bar-info-container">
+      <div class="phone-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          fill="#FFFFFF"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.5 21 3 13.5 3 4.5 3 3.95 3.45 3.5 4 3.5H7.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.12.35.03.75-.24 1.02l-2.2 2.2z"
+          />
+        </svg>
+      </div>
+      <div class="email-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          fill="#FFFFFF"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
   <div class="navbar-container">
     <nav class="navbar">
       <div>
-        <h2 v-if="currentLanguage == 'EN'">Words In Thai</h2>
-        <h2 v-else>ภาษาไทย</h2>
+        <img
+          src="/words-in-thai-logo.png"
+          alt="logo Image"
+          class="logo-image"
+        />
       </div>
       <div class="nav-links-container">
         <div class="hamburger" @click="toggleMenu">
@@ -50,23 +85,55 @@ export default {
 </script>
 
 <style scoped>
+.top-bar {
+  width: 100vw;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #24315d;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-bar-info-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 40px;
+  color: white;
+  font-size: 0.8rem;
+  align-items: center;
+}
+
+.phone-icon,
+.email-icon {
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .navbar-container {
   width: 100vw;
-  background-color: #24315d;
+  background-color: white;
   color: white;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid white;
 }
 
 .navbar {
-  max-width: 1000px;
   width: 90%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
   padding: 5px;
+  color: #24315d;
 }
 
 .nav-links-container {
@@ -84,9 +151,13 @@ export default {
 .hamburger div {
   width: 25px;
   height: 3px;
-  background-color: white;
+  color: #24315d;
   margin: 4px 0;
   transition: 0.3s;
+}
+
+.logo-image {
+  height: 35px;
 }
 
 .nav-links {
@@ -103,13 +174,13 @@ export default {
 
 .nav-links li a {
   text-decoration: none;
-  color: white;
+  color: #24315d;
 }
 
 .lang-btn {
   padding: 10px 20px;
   color: white;
-  border: 1px solid white;
+  border: 1px solid #24315d;
   border-radius: 5px;
   background-color: #24315d;
   cursor: pointer;
