@@ -411,13 +411,11 @@ p {
 
 .mission-value {
   flex: 1;
-  padding: 20px;
   margin: 0 10px;
 }
 
 .testimonials {
   margin: 40px 0;
-  padding: 20px;
 }
 
 .call-to-action {
@@ -545,6 +543,10 @@ p {
 
   .team-member {
     width: 40%; /* Make team members full width on small screens */
+  }
+
+  .testimonials {
+    padding: 10px;
   }
 }
 
