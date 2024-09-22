@@ -23,8 +23,8 @@
 
     <div class="about-section">
       <div class="about-header">
-        <h1 v-if="currentLanguage === 'EN'">Work With Translation Experts</h1>
-        <h1 v-else>ทำงานกับผู้เชี่ยวชาญด้านการแปล</h1>
+        <h3 v-if="currentLanguage === 'EN'">Work With Translation Experts</h3>
+        <h3 v-else>ทำงานกับผู้เชี่ยวชาญด้านการแปล</h3>
       </div>
 
       <div class="intro">
@@ -42,8 +42,8 @@
 
       <div class="columns">
         <div class="column">
-          <h2 v-if="currentLanguage === 'EN'">OUR LINGUISTS</h2>
-          <h2 v-else>นักแปลของเรา</h2>
+          <h3 v-if="currentLanguage === 'EN'">OUR LINGUISTS</h3>
+          <h3 v-else>นักแปลของเรา</h3>
           <p v-if="currentLanguage === 'EN'" class="body-text">
             All of our professional translators have been hand-picked from the
             best talent in the industry and have six years' average experience
@@ -57,8 +57,8 @@
           </p>
         </div>
         <div class="column">
-          <h2 v-if="currentLanguage === 'EN'">SERVICES</h2>
-          <h2 v-else>บริการ</h2>
+          <h3 v-if="currentLanguage === 'EN'">SERVICES</h3>
+          <h3 v-else>บริการ</h3>
           <p v-if="currentLanguage === 'EN'" class="body-text">
             We offer a range of services, including document translation, video
             translation, website localization, and e-learning translation. Our
@@ -71,8 +71,8 @@
           </p>
         </div>
         <div class="column">
-          <h2 v-if="currentLanguage === 'EN'">TEAM</h2>
-          <h2 v-else>ทีมงาน</h2>
+          <h3 v-if="currentLanguage === 'EN'">TEAM</h3>
+          <h3 v-else>ทีมงาน</h3>
           <p v-if="currentLanguage === 'EN'" class="body-text">
             Our team is composed of experienced professionals from diverse
             backgrounds, ensuring a wide range of expertise for your projects.
@@ -92,10 +92,148 @@
         </div>
       </div>
 
+      <section class="services-section">
+        <div class="container">
+          <div class="service-card" v-if="currentLanguage === 'EN'">
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/2020/07/1071e6146bfbbb8018d2c36358a988c4-document-circle-icon-by-vexels-150x150.png"
+              alt="Document Translation"
+            />
+            <h3>Document Translation</h3>
+            <p>
+              Get flawless and accurate translations by top industry experts for
+              all your documents across multiple industries.
+            </p>
+          </div>
+          <div class="service-card" v-else>
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/2020/07/1071e6146bfbbb8018d2c36358a988c4-document-circle-icon-by-vexels-150x150.png"
+              alt="การแปลเอกสาร"
+            />
+            <h3>การแปลเอกสาร</h3>
+            <p>
+              รับการแปลที่ถูกต้องและแม่นยำจากผู้เชี่ยวชาญด้านการแปลสำหรับเอกสารของคุณในหลายอุตสาหกรรม
+            </p>
+          </div>
+
+          <div class="service-card" v-if="currentLanguage === 'EN'">
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/elementor/thumbs/movie-icon-11-ostgcvzkou0mp4sfb4l7p24p6sje6ikh1uhma14skw.png"
+              alt="Video Translation"
+            />
+            <h3>Video Translation</h3>
+            <p>
+              Quick and accurate video transcription and translation services by
+              experienced professionals.
+            </p>
+          </div>
+          <div class="service-card" v-else>
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/elementor/thumbs/movie-icon-11-ostgcvzkou0mp4sfb4l7p24p6sje6ikh1uhma14skw.png"
+              alt="การแปลวิดีโอ"
+            />
+            <h3>การแปลวิดีโอ</h3>
+            <p>
+              บริการถอดเสียงและแปลวิดีโออย่างรวดเร็วและแม่นยำโดยมืออาชีพที่มีประสบการณ์
+            </p>
+          </div>
+
+          <div class="service-card" v-if="currentLanguage === 'EN'">
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/elementor/thumbs/vidgames-ostgcvzkou0mp4sfb4l7p24p6sje6ikh1uhma14skw.png"
+              alt="Game Localization"
+            />
+            <h3>Game/Software Localization</h3>
+            <p>
+              Flawless translations for games, catering to target audiences and
+              maintaining relevance in overseas markets.
+            </p>
+          </div>
+          <div class="service-card" v-else>
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/elementor/thumbs/vidgames-ostgcvzkou0mp4sfb4l7p24p6sje6ikh1uhma14skw.png"
+              alt="การแปลเกม/ซอฟต์แวร์"
+            />
+            <h3>การแปลเกม/ซอฟต์แวร์</h3>
+            <p>
+              การแปลที่ถูกต้องสำหรับเกม
+              โดยคำนึงถึงกลุ่มเป้าหมายและรักษาความเกี่ยวข้องในตลาดต่างประเทศ
+            </p>
+          </div>
+
+          <div class="service-card" v-if="currentLanguage === 'EN'">
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/2020/07/96d12090c2b368b8c72d2dfb6e44e360-computer-circle-icon-with-drop-shadow-by-vexels-150x150.png"
+              alt="Website Localization"
+            />
+            <h3>Website Localization</h3>
+            <p>
+              Design your website translations to resonate with visitors while
+              maintaining content integrity.
+            </p>
+          </div>
+          <div class="service-card" v-else>
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/2020/07/96d12090c2b368b8c72d2dfb6e44e360-computer-circle-icon-with-drop-shadow-by-vexels-150x150.png"
+              alt="การแปลเว็บไซต์"
+            />
+            <h3>การแปลเว็บไซต์</h3>
+            <p>
+              ออกแบบการแปลเว็บไซต์ของคุณให้มีความสัมพันธ์กับผู้เยี่ยมชมในขณะที่รักษาความสมบูรณ์ของเนื้อหา
+            </p>
+          </div>
+
+          <div class="service-card" v-if="currentLanguage === 'EN'">
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/elementor/thumbs/image-ostgcvzkou0mp4sfb4l7p24p6sje6ikh1uhma14skw.png"
+              alt="E-Learning Translation"
+            />
+            <h3>E-Learning Translation</h3>
+            <p>
+              Flexible translations for e-learning platforms, enhancing
+              understanding with relevant terminologies.
+            </p>
+          </div>
+          <div class="service-card" v-else>
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/elementor/thumbs/image-ostgcvzkou0mp4sfb4l7p24p6sje6ikh1uhma14skw.png"
+              alt="การแปลการเรียนรู้ออนไลน์"
+            />
+            <h3>การแปลการเรียนรู้ออนไลน์</h3>
+            <p>
+              การแปลที่ยืดหยุ่นสำหรับแพลตฟอร์มการเรียนรู้ออนไลน์
+              เพิ่มความเข้าใจด้วยคำศัพท์ที่เกี่ยวข้อง
+            </p>
+          </div>
+
+          <div class="service-card" v-if="currentLanguage === 'EN'">
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/elementor/thumbs/WebdesignXpertLab-ostgcvzkou0mp4sfb4l7p24p6sje6ikh1uhma14skw.png"
+              alt="E-Commerce Translation"
+            />
+            <h3>E-Commerce Translation</h3>
+            <p>
+              Error-free translations for e-stores to boost conversions and add
+              credibility to your business.
+            </p>
+          </div>
+          <div class="service-card" v-else>
+            <img
+              src="https://wordsinthai.com/wp-content/uploads/elementor/thumbs/WebdesignXpertLab-ostgcvzkou0mp4sfb4l7p24p6sje6ikh1uhma14skw.png"
+              alt="การแปลอีคอมเมิร์ซ"
+            />
+            <h3>การแปลอีคอมเมิร์ซ</h3>
+            <p>
+              การแปลที่ปราศจากข้อผิดพลาดสำหรับร้านค้าออนไลน์เพื่อเพิ่มการแปลงและเพิ่มความน่าเชื่อถือให้กับธุรกิจของคุณ
+            </p>
+          </div>
+        </div>
+      </section>
+
       <div class="mission-values">
-        <div class="column">
-          <h2 v-if="currentLanguage === 'EN'">MISSION</h2>
-          <h2 v-else>ภารกิจ</h2>
+        <div class="mission-value">
+          <h3 v-if="currentLanguage === 'EN'">MISSION</h3>
+          <h3 v-else>ภารกิจ</h3>
           <p v-if="currentLanguage === 'EN'">
             Our mission is to provide high-quality translations that resonate
             with your audience. We aim to break down language barriers,
@@ -106,9 +244,9 @@
             เรามุ่งมั่นที่จะทำลายอุปสรรคทางภาษาเพื่อส่งเสริมการสื่อสารและความเข้าใจระหว่างวัฒนธรรม
           </p>
         </div>
-        <div class="column">
-          <h2 v-if="currentLanguage === 'EN'">VALUES</h2>
-          <h2 v-else>ค่านิยม</h2>
+        <div class="mission-value">
+          <h3 v-if="currentLanguage === 'EN'">VALUES</h3>
+          <h3 v-else>ค่านิยม</h3>
           <p v-if="currentLanguage === 'EN'">
             Our values are integrity, professionalism, and dedication. We
             believe in treating every project with utmost care and attention,
@@ -124,8 +262,8 @@
 
       <div class="mission-values">
         <div class="testimonials">
-          <h2 v-if="currentLanguage === 'EN'">Client Testimonials</h2>
-          <h2 v-else>คำรับรองจากลูกค้า</h2>
+          <h3 v-if="currentLanguage === 'EN'">CLIENT TESTIMONIALS</h3>
+          <h3 v-else>คำรับรองจากลูกค้า</h3>
           <p v-if="currentLanguage === 'EN'">
             "Words In Thai provided an exceptional service, delivering our
             project on time and exceeding our expectations."
@@ -137,8 +275,8 @@
         </div>
 
         <div class="call-to-action">
-          <h2 v-if="currentLanguage === 'EN'">Ready to Get Started?</h2>
-          <h2 v-else>พร้อมที่จะเริ่มต้นแล้วหรือยัง?</h2>
+          <h3 v-if="currentLanguage === 'EN'">READY TO GET STARTED?</h3>
+          <h3 v-else>พร้อมที่จะเริ่มต้นแล้วหรือยัง?</h3>
           <p v-if="currentLanguage === 'EN'">
             Contact us today for a free consultation and let us help you with
             your translation needs.
@@ -192,8 +330,6 @@ export default {
 
 <style scoped>
 .about-page {
-  /* border: 1px solid #ccc; */
-  /* margin-top: 5px; */
   border-radius: 5px;
   border-top: none;
 }
@@ -225,8 +361,10 @@ export default {
 }
 
 h2 {
+  color: #333;
   font-size: 2em;
   margin: 20px 0 20px;
+  text-transform: uppercase; /* Make headings uppercase */
 }
 
 .columns {
@@ -244,7 +382,6 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.6;
-  /* text-align: justify; */
   color: #24315d;
 }
 
@@ -270,7 +407,12 @@ p {
   display: flex;
   justify-content: space-between;
   margin: 40px 0;
-  align-items: center;
+}
+
+.mission-value {
+  flex: 1;
+  padding: 20px;
+  margin: 0 10px;
 }
 
 .testimonials {
@@ -279,7 +421,6 @@ p {
 
 .call-to-action {
   margin: 40px 0;
-  padding: 20px;
   border-radius: 8px;
 }
 
@@ -318,28 +459,6 @@ p {
   color: white;
 }
 
-.flag {
-  position: absolute;
-  background-color: #f4f4f4;
-  top: 390px;
-  left: 45%;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 5px solid #f4f4f4;
-  z-index: 1;
-}
-
-.about-header h1 {
-  color: #333;
-  font-weight: 100;
-}
-
-h2 {
-  font-weight: 600;
-  color: #24315d;
-}
-
 .banner-buttons {
   display: flex;
   justify-content: center;
@@ -350,9 +469,7 @@ h2 {
 .banner-btn {
   padding: 10px 20px;
   border: 1px solid #24315d;
-
   border-radius: 50px;
-
   background-color: #24315d;
   color: white;
   cursor: pointer;
@@ -363,12 +480,6 @@ h2 {
 .banner-btn:hover {
   color: #24315d;
   background-color: white;
-}
-
-.testimonials-and-actions-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -406,30 +517,60 @@ h2 {
     font-size: 1.2em;
   }
 
-  .flag {
-    position: absolute;
-    background-color: #f4f4f4;
-    top: 350px;
-    left: 43%;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    border: 5px solid #f4f4f4;
-    z-index: 1;
+  .mission-values {
+    flex-direction: column; /* Stack mission and values sections */
   }
 
-  .banner-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+  .mission-value {
+    margin-bottom: 20px; /* Add spacing between stacked items */
   }
 
-  @media screen and (max-width: 768px) {
-    .banner-btn {
-      font-size: 1em;
-      padding: 8px 16px;
-    }
+  .team-section {
+    flex-direction: column; /* Stack team members */
+    align-items: center;
+  }
+
+  .team-member {
+    width: 100%; /* Make team members full width on small screens */
+  }
+}
+
+.services-section {
+  padding: 40px 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.service-card {
+  flex: 0 1 calc(33.333% - 20px);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.service-card img {
+  width: 100px;
+  height: auto;
+}
+h3 {
+  margin: 15px 0;
+  font-size: 1.5em;
+  color: #24315d;
+}
+p {
+  color: #555;
+}
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 </style>

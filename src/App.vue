@@ -23,7 +23,8 @@ body {
   font-family: "Noto Sans Thai", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fefefe;
+  background-color: #f5f5f5;
+
   display: flex;
   justify-content: center;
 }
@@ -34,7 +35,6 @@ h2 {
 }
 
 #app {
-  background-color: white;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
